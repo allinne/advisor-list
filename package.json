@@ -1,9 +1,10 @@
 {
-  "name": "advisors-list",
+  "name": "advisor-list",
   "version": "1.0.0",
+  "private": true,
   "description": "This is an application to show advisor list and make some actions with it like sorting and filtering",
-  "main": "index.js",
   "scripts": {
+    "build": "webpack --mode=production",
     "dev:bundler": "webpack -w --mode=development",
     "dev:server": "tsnd src/server/server.ts",
     "lint:js": "eslint src/**/*{.ts,.tsx}",
@@ -34,12 +35,28 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
     "@types/react": "^18.2.12",
+    "@types/react-dom": "^18.2.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
     "@typescript-eslint/parser": "^5.59.11",
     "eslint": "^8.42.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^2.8.8",
     "ts-node-dev": "^2.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

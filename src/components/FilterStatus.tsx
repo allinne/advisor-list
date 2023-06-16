@@ -7,13 +7,13 @@ function FilterStatus() {
   const { currentFiltering, setCurrentFiltering } = useContext(CurrentFilteringContext);
 
   const statuses = useMemo(() => {
-    return AVAILABILITY_STATUS_LIST.map((el: string) => {
+    return AVAILABILITY_STATUS_LIST.map((el) => {
       return <option value={el} key={el}>{el}</option>;
     });
   }, []);
 
   const handleSelectChange = (ev: ChangeEvent<HTMLSelectElement>) => {
-    setCurrentFiltering({ ...currentFiltering, status: AvailabilityStatus[ev.currentTarget.value] });
+    setCurrentFiltering({ ...currentFiltering, status: AvailabilityStatus[ev.currentTarget.value as keyof typeof AvailabilityStatus] });
   };
 
   return (

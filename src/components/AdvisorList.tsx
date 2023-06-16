@@ -6,7 +6,7 @@ import AdvisorPreview from './AdvisorPreview';
 import { Advisor, AvailabilityStatus } from '../@types';
 // import { fetchAdvisors } from '../api-client';
 
-function AdvisorList({ initialAdvisors }) {
+function AdvisorList({ initialAdvisors }: { initialAdvisors: Advisor[] }) {
   const { currentSorting } = useContext(CurrentSortingContext);
   const { currentFiltering } = useContext(CurrentFilteringContext);
 

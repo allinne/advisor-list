@@ -8,7 +8,7 @@ async function main() {
 
   await client.collection("advisors").deleteMany({});
 
-  let list = [];
+  const list = [];
   for (let i = 0; i < 20; i++) {
     list.push({
       id: faker.database.mongodbObjectId(),
