@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { CurrentSortingContext } from '../contexts/index';
 
-function SortingPanel() {
+function SortReview() {
   const { currentSorting, setCurrentSorting } = useContext(CurrentSortingContext);
 
   const handleButtonClick = () => {
@@ -9,27 +9,18 @@ function SortingPanel() {
     setCurrentSorting({ ... currentSorting, byReviews: sortByReviews });
   };
 
-  const handleResetButtonClick = () => {
-    setCurrentSorting({ ... currentSorting, byReviews: '' });
-  };
-
   let text = '';
   if (currentSorting.byReviews === 'desc') {
     text = 'most popular';
   } else if (currentSorting.byReviews === 'asc') {
-    text = 'less popular';
+    text = 'least popular';
   }
 
   return (
-    <>
-      <button onClick={() => handleButtonClick()}>
-        Sort by review: {text}
-      </button>
-      <button onClick={() => handleResetButtonClick()}>
-        Reset
-      </button>
-    </>
+    <div onClick={() => handleButtonClick()}>
+      reviews {text}
+    </div>
   )
 }
 
-export default SortingPanel
+export default SortReview

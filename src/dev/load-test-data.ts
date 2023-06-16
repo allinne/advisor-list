@@ -1,7 +1,7 @@
 import { connectClient, stopClient } from "../server/db";
 import { faker } from '@faker-js/faker';
 
-const languages = ['English', 'German', 'Spanish'];
+import { LANGUAGES } from "../constants";
 
 async function main() {
   const client = await connectClient();
@@ -13,8 +13,8 @@ async function main() {
     list.push({
       id: faker.database.mongodbObjectId(),
       name: faker.person.fullName(),
-      isOnline: faker.datatype.boolean(),
-      language: languages[Math.floor(Math.random() * languages.length)],
+      status: faker.number.int({ min: 1, max: 2}),
+      language: LANGUAGES[Math.floor(Math.random() * LANGUAGES.length)],
       reviewNumber: faker.number.int({ min: 10, max: 1000})
     })
   }

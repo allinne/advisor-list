@@ -14,7 +14,7 @@ router.get("/advisors", async (req, res) => {
     .project({
       id: 1,
       name: 1,
-      isOnline: 1,
+      status: 1,
       language: 1,
       reviewNumber: 1,
     })
