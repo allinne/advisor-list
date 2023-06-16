@@ -1,26 +1,44 @@
-import { useEffect, useState } from 'react';
-// import AdvisorPreview from './AdvisorPreview';
+import { useContext } from 'react';
+import { CurrentSortingContext } from '../contexts/index';
+
+import AdvisorPreview from './AdvisorPreview';
+import { Advisor } from '../@types';
 // import { fetchAdvisors } from '../api-client';
 
 function AdvisorList({ initialAdvisors }) {
-  const [ advisors ] = useState(initialAdvisors);
+  const { currentSorting } = useContext(CurrentSortingContext);
 
-  useEffect(() => {
-  //   async function fetchData() {
-  //     const data = await fetchAdvisors();
-  //     console.log(data)
-
-  //     setAdvisors(data);
-  //   }
-  //   fetchData();
-  }, []);
+  let advisors: Advisor[] = [];
+  switch (currentSorting['byReviews']) {
+    case 'asc':
+      advisors = [...initialAdvisors].sort((a, b) => a.reviewNumber - b.reviewNumber);
+      break;
+    case 'desc':
+      advisors = [...initialAdvisors].sort((a, b) => b.reviewNumber - a.reviewNumber);
+      break;
+    case '':
+    default:
+      advisors = initialAdvisors;
+  }
 
   return (
     <>
       <div>AdvisorList</div>
-      {advisors.map((el) => {
-        return <div key={el.id}>{el.id}</div>
-      })}
+      <table>
+      <thead>
+        <tr>
+          <td>Advisor</td>
+          <td>status</td>
+          <td>language</td>
+          <td>review number</td>
+        </tr>
+      </thead>
+      <tbody>
+        {advisors.map((el) => {
+          return <AdvisorPreview key={el.id} advisor={el}/>
+        })}
+      </tbody>
+    </table>
     </>
   )
 }

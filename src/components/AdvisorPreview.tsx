@@ -1,8 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { Advisor } from '../@types';
 
-const AdvisorPreview: React.FC<{ advisor: object }> = ({ advisor }) => {
+const AdvisorPreview: React.FC<{ advisor: Advisor }> = ({ advisor }) => {
   return (
-    <div>{advisor.name}</div>
+    <tr>
+      <td>{advisor.name}</td>
+      <td>{advisor.isOnline ? 'online' : 'offline'}</td>
+      <td>{advisor.language}</td>
+      <td>{advisor.reviewNumber}</td>
+    </tr>
   )
 }
 
