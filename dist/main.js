@@ -100,13 +100,23 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
+/***/ "./src/components/AdvisorList.tsx":
+/*!****************************************!*\
+  !*** ./src/components/AdvisorList.tsx ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+eval("\nvar __read = (this && this.__read) || function (o, n) {\n    var m = typeof Symbol === \"function\" && o[Symbol.iterator];\n    if (!m) return o;\n    var i = m.call(o), r, ar = [], e;\n    try {\n        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);\n    }\n    catch (error) { e = { error: error }; }\n    finally {\n        try {\n            if (r && !r.done && (m = i[\"return\"])) m.call(i);\n        }\n        finally { if (e) throw e.error; }\n    }\n    return ar;\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nvar react_1 = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n// import AdvisorPreview from './AdvisorPreview';\n// import { fetchAdvisors } from '../api-client';\nfunction AdvisorList(_a) {\n    var initialAdvisors = _a.initialAdvisors;\n    var _b = __read((0, react_1.useState)(initialAdvisors), 1), advisors = _b[0];\n    (0, react_1.useEffect)(function () {\n        //   async function fetchData() {\n        //     const data = await fetchAdvisors();\n        //     console.log(data)\n        //     setAdvisors(data);\n        //   }\n        //   fetchData();\n    }, []);\n    return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(\"div\", { children: \"AdvisorList\" }), advisors.map(function (el) {\n                return (0, jsx_runtime_1.jsx)(\"div\", { children: el.id }, el.id);\n            })] }));\n}\nexports[\"default\"] = AdvisorList;\n\n\n//# sourceURL=webpack://advisors-list/./src/components/AdvisorList.tsx?");
+
+/***/ }),
+
 /***/ "./src/components/App.tsx":
 /*!********************************!*\
   !*** ./src/components/App.tsx ***!
   \********************************/
-/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nfunction App() {\n    return ((0, jsx_runtime_1.jsx)(jsx_runtime_1.Fragment, { children: (0, jsx_runtime_1.jsx)(\"div\", { children: \"app\" }) }));\n}\nexports[\"default\"] = App;\n\n\n//# sourceURL=webpack://advisors-list/./src/components/App.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nvar AdvisorList_1 = __importDefault(__webpack_require__(/*! ./AdvisorList */ \"./src/components/AdvisorList.tsx\"));\nfunction App(_a) {\n    var initialData = _a.initialData;\n    return ((0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(\"div\", { children: \"app\" }), (0, jsx_runtime_1.jsx)(AdvisorList_1.default, { initialAdvisors: initialData })] }));\n}\nexports[\"default\"] = App;\n\n\n//# sourceURL=webpack://advisors-list/./src/components/App.tsx?");
 
 /***/ }),
 
@@ -116,7 +126,7 @@ eval("\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar 
   \***********************/
 /***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
-eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nvar client_1 = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nvar App_1 = __importDefault(__webpack_require__(/*! ./components/App */ \"./src/components/App.tsx\"));\nvar container = document.getElementById(\"app\");\nvar root = (0, client_1.createRoot)(container);\nroot.render((0, jsx_runtime_1.jsx)(App_1.default, {}));\n\n\n//# sourceURL=webpack://advisors-list/./src/index.tsx?");
+eval("\nvar __importDefault = (this && this.__importDefault) || function (mod) {\n    return (mod && mod.__esModule) ? mod : { \"default\": mod };\n};\nObject.defineProperty(exports, \"__esModule\", ({ value: true }));\nvar jsx_runtime_1 = __webpack_require__(/*! react/jsx-runtime */ \"./node_modules/react/jsx-runtime.js\");\nvar client_1 = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\nvar App_1 = __importDefault(__webpack_require__(/*! ./components/App */ \"./src/components/App.tsx\"));\nvar container = document.getElementById(\"app\");\nvar root = (0, client_1.createRoot)(container);\nroot.render((0, jsx_runtime_1.jsx)(App_1.default, { initialData: window.initialData }));\n\n\n//# sourceURL=webpack://advisors-list/./src/index.tsx?");
 
 /***/ })
 
