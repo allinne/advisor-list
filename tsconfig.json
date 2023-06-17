@@ -11,7 +11,7 @@
     "preserveSymlinks": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "sourceMap": true,
+    "inlineSourceMap": true,
     "useUnknownInCatchVariables": false,
     "strict": true
   },

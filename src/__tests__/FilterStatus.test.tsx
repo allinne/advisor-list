@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { INITIAL_FILTERING, LANGUAGES } from '../constants';
+import { INITIAL_FILTERING } from '../constants';
 import { CurrentFilteringContext } from '../contexts/index';
 import FilterStatus from '../components/FilterStatus';
 import { AvailabilityStatus } from '../@types';
@@ -15,7 +15,7 @@ describe('FilterStatus', () => {
       </CurrentFilteringContext.Provider>
     );
 
-    let options = screen.getAllByTestId('select-status-option');
+    const options = screen.getAllByTestId('select-status-option');
     expect((options[0] as HTMLOptionElement).selected).toBeTruthy();
   });
 
@@ -32,7 +32,7 @@ describe('FilterStatus', () => {
       </CurrentFilteringContext.Provider>
     );
 
-    let options = screen.getAllByTestId('select-status-option');
+    const options = screen.getAllByTestId('select-status-option');
     expect((options[2] as HTMLOptionElement).selected).toBeTruthy();
   });
 

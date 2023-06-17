@@ -58,7 +58,7 @@ describe('App', () => {
       expect(advisors.length).toStrictEqual(2);
 
       fireEvent.change(screen.getByTestId('select-status'), { target: { value: 'online' } });
-      let options = screen.getAllByTestId('select-status-option');
+      const options = screen.getAllByTestId('select-status-option');
       expect((options[1] as HTMLOptionElement).selected).toBeTruthy();
 
       advisors = screen.getAllByTestId('advisor-item');
@@ -75,7 +75,7 @@ describe('App', () => {
       expect(advisors.length).toStrictEqual(2);
 
       fireEvent.change(screen.getByTestId('select-language'), { target: { value: 1 } });
-      let options = screen.getAllByTestId('select-language-option');
+      const options = screen.getAllByTestId('select-language-option');
       expect((options[1] as HTMLOptionElement).selected).toBeTruthy();
 
       advisors = screen.getAllByTestId('advisor-item');

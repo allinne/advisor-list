@@ -14,7 +14,7 @@ describe('FilterLanguage', () => {
       </CurrentFilteringContext.Provider>
     );
 
-    let options = screen.getAllByTestId('select-language-option');
+    const options = screen.getAllByTestId('select-language-option');
     expect((options[0] as HTMLOptionElement).selected).toBeTruthy();
   });
 
@@ -31,7 +31,7 @@ describe('FilterLanguage', () => {
       </CurrentFilteringContext.Provider>
     );
 
-    let options = screen.getAllByTestId('select-language-option');
+    const options = screen.getAllByTestId('select-language-option');
     expect((options[2] as HTMLOptionElement).selected).toBeTruthy();
   });
 

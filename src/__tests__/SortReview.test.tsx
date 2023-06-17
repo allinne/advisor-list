@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { INITIAL_SORTING, LANGUAGES } from '../constants';
+import { INITIAL_SORTING } from '../constants';
 import { CurrentSortingContext } from '../contexts/index';
-import { Sorting, SortingType } from '../@types';
+import { Sorting } from '../@types';
 import SortReview from '../components/SortReview';
 
 describe('SortReview', () => {
