@@ -8,7 +8,8 @@
     "dev:bundler": "webpack -w --mode=development",
     "dev:server": "tsnd src/server/server.ts",
     "lint:js": "eslint src/**/*{.ts,.tsx}",
-    "test": "test"
+    "test": "jest --collect-coverage",
+    "test:watch": "npm run test -- --watch"
   },
   "repository": {
     "type": "git",
@@ -35,8 +36,11 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.2",
     "@types/react": "^18.2.12",
     "@types/react-dom": "^18.2.5",
     "@typescript-eslint/eslint-plugin": "^5.59.11",
@@ -44,7 +48,10 @@
     "eslint": "^8.42.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
     "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
     "ts-node-dev": "^2.0.0"
   },
   "browserslist": {

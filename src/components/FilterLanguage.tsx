@@ -9,7 +9,11 @@ function FilterLanguage() {
     return ['all', ...LANGUAGES];
   }, []);
   const languages = languageList.map((el: string, i: number) => {
-    return <option value={i} key={i}>{el}</option>;
+    return (
+      <option value={i} key={i} data-testid="select-language-option">
+        {el}
+      </option>
+    );
   });
 
   const currentIndex = useMemo(() => {
@@ -26,6 +30,7 @@ function FilterLanguage() {
       <select
         onChange={(ev) => handleSelectChange(ev)}
         value={currentIndex}
+        data-testid="select-language"
       >
         {languages}
       </select>

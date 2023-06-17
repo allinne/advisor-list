@@ -7,7 +7,7 @@ export enum AvailabilityStatus {
 }
 
 export type Advisor = {
-  id: number,
+  id: string,
   name: string,
   status: AvailabilityStatus,
   language: string,

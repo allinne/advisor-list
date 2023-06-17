@@ -8,7 +8,11 @@ function FilterStatus() {
 
   const statuses = useMemo(() => {
     return AVAILABILITY_STATUS_LIST.map((el) => {
-      return <option value={el} key={el}>{el}</option>;
+      return (
+        <option value={el} key={el} data-testid="select-status-option">
+          {el}
+        </option>
+      );
     });
   }, []);
 
@@ -22,6 +26,7 @@ function FilterStatus() {
       <select
         onChange={(ev) => handleSelectChange(ev)}
         value={AvailabilityStatus[currentFiltering.status]}
+        data-testid="select-status"
       >
         {statuses}
       </select>

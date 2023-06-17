@@ -17,7 +17,11 @@ function SortReview() {
   }
 
   return (
-    <div onClick={() => handleButtonClick()}>
+    <div
+      onClick={() => handleButtonClick()}
+      data-sort-direction={currentSorting.byReviews}
+      data-testid="filter-reviews"
+    >
       reviews {text}
     </div>
   )

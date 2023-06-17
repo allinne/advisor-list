@@ -3,11 +3,11 @@ import { Advisor, AvailabilityStatus } from '../@types';
 
 const AdvisorPreview: React.FC<{ advisor: Advisor }> = ({ advisor }) => {
   return (
-    <tr>
-      <td>{advisor.name}</td>
-      <td>{AvailabilityStatus[advisor.status]}</td>
-      <td>{advisor.language}</td>
-      <td>{advisor.reviewNumber}</td>
+    <tr data-testid="advisor-item">
+      <td data-testid="advisor-name">{advisor.name}</td>
+      <td data-testid="advisor-status">{AvailabilityStatus[advisor.status]}</td>
+      <td data-testid="advisor-language">{advisor.language}</td>
+      <td data-testid="advisor-reviews">{advisor.reviewNumber}</td>
     </tr>
   )
 }
