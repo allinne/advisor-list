@@ -1,8 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-/dist/main.js
-/dist/main.js*
 /node_modules
 /.pnp
 .pnp.js
@@ -13,6 +11,8 @@ junit.xml
 
 # production
 /build
+/dist/main.js
+/dist/main.js*
 
 # misc
 .DS_Store
