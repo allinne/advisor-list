@@ -34,3 +34,7 @@ export type CurrentFilteringContextType = {
   currentFiltering: Filtering,
   setCurrentFiltering: Dispatch<SetStateAction<Filtering>>,
 }
+
+declare global {
+  interface Window { initialData: Advisor[]; }
+}
