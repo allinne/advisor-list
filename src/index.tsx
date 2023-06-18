@@ -7,6 +7,6 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <App initialData={(window as any).initialData} />
+    <App initialData={window.initialData} />
   </React.StrictMode>
 );
