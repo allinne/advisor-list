@@ -13,3 +13,5 @@ export const INITIAL_FILTERING: Filtering = {
 export const LANGUAGES = ['English', 'German', 'Spanish'];
 
 export const AVAILABILITY_STATUS_LIST = Object.values(AvailabilityStatus).filter(el => isNaN(Number(el)));
+
+export const FUNC_STUB = () => <></>;

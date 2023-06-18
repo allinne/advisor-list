@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, ReactNode, ChangeEvent } from "react";
 
 export enum AvailabilityStatus {
   'all' = 0,
@@ -33,6 +33,15 @@ export type Filtering = {
 export type CurrentFilteringContextType = {
   currentFiltering: Filtering,
   setCurrentFiltering: Dispatch<SetStateAction<Filtering>>,
+}
+
+export interface FilterSelectData {
+  createSelectElement({selectType, optionList, currentValue, handleSelectChange} : {
+    selectType: string,
+    optionList: ReactNode,
+    currentValue: string | number,
+    handleSelectChange: (ev: ChangeEvent<HTMLSelectElement>) => void
+  }): JSX.Element;
 }
 
 declare global {

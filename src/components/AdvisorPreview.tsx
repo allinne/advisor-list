@@ -23,4 +23,4 @@ const AdvisorPreview: React.FC<{ advisor: Advisor }> = ({ advisor }) => {
   )
 }
 
-export default AdvisorPreview
+export default AdvisorPreview;

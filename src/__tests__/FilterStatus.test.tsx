@@ -1,8 +1,11 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { INITIAL_FILTERING } from '../constants';
+import { INITIAL_FILTERING, FUNC_STUB } from '../constants';
 import { CurrentFilteringContext } from '../contexts/index';
 import FilterStatus from '../components/FilterStatus';
+import { withFilterSelect } from '../components/HOC/withFilterSelect';
 import { AvailabilityStatus } from '../@types';
+
+const FilterStatusComponent = withFilterSelect(FilterStatus);
 
 describe('FilterStatus', () => {
   it('renders a component', async () => {
@@ -14,7 +17,7 @@ describe('FilterStatus', () => {
         <table>
           <thead>
             <tr>
-              <FilterStatus/>
+              <FilterStatusComponent createSelectElement={FUNC_STUB}/>
             </tr>
           </thead>
         </table>
@@ -37,7 +40,7 @@ describe('FilterStatus', () => {
         <table>
           <thead>
             <tr>
-              <FilterStatus/>
+              <FilterStatusComponent createSelectElement={FUNC_STUB}/>
             </tr>
           </thead>
         </table>
@@ -57,7 +60,7 @@ describe('FilterStatus', () => {
         <table>
           <thead>
             <tr>
-              <FilterStatus/>
+              <FilterStatusComponent createSelectElement={FUNC_STUB}/>
             </tr>
           </thead>
         </table>

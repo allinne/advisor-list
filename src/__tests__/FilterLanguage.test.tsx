@@ -1,7 +1,10 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { INITIAL_FILTERING, LANGUAGES } from '../constants';
+import { INITIAL_FILTERING, LANGUAGES, FUNC_STUB } from '../constants';
 import { CurrentFilteringContext } from '../contexts/index';
+import { withFilterSelect } from '../components/HOC/withFilterSelect';
 import FilterLanguage from '../components/FilterLanguage';
+
+const FilterLanguageComponent = withFilterSelect(FilterLanguage);
 
 describe('FilterLanguage', () => {
   it('renders a component', async () => {
@@ -13,7 +16,7 @@ describe('FilterLanguage', () => {
         <table>
           <thead>
             <tr>
-              <FilterLanguage/>
+              <FilterLanguageComponent createSelectElement={FUNC_STUB}/>
             </tr>
           </thead>
         </table>
@@ -36,7 +39,7 @@ describe('FilterLanguage', () => {
         <table>
           <thead>
             <tr>
-              <FilterLanguage/>
+              <FilterLanguageComponent createSelectElement={FUNC_STUB}/>
             </tr>
           </thead>
         </table>
@@ -56,7 +59,7 @@ describe('FilterLanguage', () => {
         <table>
           <thead>
             <tr>
-              <FilterLanguage/>
+              <FilterLanguageComponent createSelectElement={FUNC_STUB}/>
             </tr>
           </thead>
         </table>

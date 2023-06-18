@@ -4,8 +4,12 @@ import { CurrentSortingContext, CurrentFilteringContext } from '../contexts';
 import SortReview from './SortReview';
 import FilterLanguage from './FilterLanguage';
 import FilterStatus from './FilterStatus';
-import { INITIAL_SORTING, INITIAL_FILTERING } from '../constants';
+import { withFilterSelect } from './HOC/withFilterSelect';
+import { INITIAL_SORTING, INITIAL_FILTERING, FUNC_STUB } from '../constants';
 import { Advisor } from '../@types';
+
+const FilterStatusComponent = withFilterSelect(FilterStatus);
+const FilterLanguageComponent = withFilterSelect(FilterLanguage);
 
 function App({ initialData }: { initialData: Advisor[] }) {
   const [ currentSorting, setCurrentSorting ] = useState(INITIAL_SORTING);
@@ -20,8 +24,8 @@ function App({ initialData }: { initialData: Advisor[] }) {
             <thead className='advisor-table__head'>
               <tr>
                 <td>Advisor</td>
-                <FilterStatus/>
-                <FilterLanguage/>
+                <FilterStatusComponent createSelectElement={FUNC_STUB}/>
+                <FilterLanguageComponent createSelectElement={FUNC_STUB}/>
                 <SortReview/>
               </tr>
             </thead>
