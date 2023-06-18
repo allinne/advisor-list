@@ -11,7 +11,13 @@ describe('SortReview', () => {
 
     render(
       <CurrentSortingContext.Provider value={{ currentSorting, setCurrentSorting }}>
-        <SortReview/>
+        <table>
+          <thead>
+            <tr>
+              <SortReview/>
+            </tr>
+          </thead>
+        </table>
       </CurrentSortingContext.Provider>
     );
 
@@ -28,7 +34,13 @@ describe('SortReview', () => {
 
     render(
       <CurrentSortingContext.Provider value={{ currentSorting, setCurrentSorting }}>
-        <SortReview/>
+        <table>
+          <thead>
+            <tr>
+              <SortReview/>
+            </tr>
+          </thead>
+        </table>
       </CurrentSortingContext.Provider>
     );
 
@@ -45,7 +57,13 @@ describe('SortReview', () => {
 
     render(
       <CurrentSortingContext.Provider value={{ currentSorting, setCurrentSorting }}>
-        <SortReview/>
+        <table>
+          <thead>
+            <tr>
+              <SortReview/>
+            </tr>
+          </thead>
+        </table>
       </CurrentSortingContext.Provider>
     );
 
@@ -62,7 +80,13 @@ describe('SortReview', () => {
 
     render(
       <CurrentSortingContext.Provider value={{ currentSorting, setCurrentSorting }}>
-        <SortReview/>
+        <table>
+          <thead>
+            <tr>
+              <SortReview/>
+            </tr>
+          </thead>
+        </table>
       </CurrentSortingContext.Provider>
     );
 

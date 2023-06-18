@@ -51,7 +51,7 @@ describe('App', () => {
       ];
     });
 
-    it('should filter out by online status', async () => {
+    it('should filter by online status', async () => {
       render(<App initialData={list}/>);
 
       let advisors = screen.getAllByTestId('advisor-item');
@@ -68,7 +68,7 @@ describe('App', () => {
       expect(name.innerHTML).toStrictEqual('Eva');
     });
 
-    it('should filter out by language', async () => {
+    it('should filter by language', async () => {
       render(<App initialData={list}/>);
 
       let advisors = screen.getAllByTestId('advisor-item');
@@ -115,7 +115,7 @@ describe('App', () => {
       ];
     });
 
-    it('should sort out by the most popular advisors', async () => {
+    it('should sort by the most popular advisors', async () => {
       render(<App initialData={list}/>);
 
       let advisors = await screen.findAllByTestId('advisor-name');
@@ -131,7 +131,7 @@ describe('App', () => {
       expect(advisors[2].innerHTML).toStrictEqual('Eva');
     });
 
-    it('should sort out by the least popular advisors', async () => {
+    it('should sort by the least popular advisors', async () => {
       render(<App initialData={list}/>);
 
       fireEvent.click(screen.getByTestId('filter-reviews'));

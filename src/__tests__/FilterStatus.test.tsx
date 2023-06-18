@@ -11,7 +11,13 @@ describe('FilterStatus', () => {
 
     render(
       <CurrentFilteringContext.Provider value={{ currentFiltering, setCurrentFiltering }}>
-        <FilterStatus/>
+        <table>
+          <thead>
+            <tr>
+              <FilterStatus/>
+            </tr>
+          </thead>
+        </table>
       </CurrentFilteringContext.Provider>
     );
 
@@ -28,7 +34,13 @@ describe('FilterStatus', () => {
 
     render(
       <CurrentFilteringContext.Provider value={{ currentFiltering, setCurrentFiltering }}>
-        <FilterStatus/>
+        <table>
+          <thead>
+            <tr>
+              <FilterStatus/>
+            </tr>
+          </thead>
+        </table>
       </CurrentFilteringContext.Provider>
     );
 
@@ -42,7 +54,13 @@ describe('FilterStatus', () => {
 
     render(
       <CurrentFilteringContext.Provider value={{ currentFiltering, setCurrentFiltering }}>
-        <FilterStatus/>
+        <table>
+          <thead>
+            <tr>
+              <FilterStatus/>
+            </tr>
+          </thead>
+        </table>
       </CurrentFilteringContext.Provider>
     );
 

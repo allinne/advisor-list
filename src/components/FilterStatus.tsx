@@ -21,16 +21,24 @@ function FilterStatus() {
   };
 
   return (
-    <label>
-      Status
-      <select
-        onChange={(ev) => handleSelectChange(ev)}
-        value={AvailabilityStatus[currentFiltering.status]}
-        data-testid="select-status"
-      >
-        {statuses}
-      </select>
-    </label>
+    <td>
+      <div className="advisor-table__head-filter">
+        <label htmlFor="select-status">
+          Status
+        </label>
+        <select
+          onChange={handleSelectChange}
+          value={AvailabilityStatus[currentFiltering.status]}
+          className="advisor-table__select"
+          id="select-status"
+          data-testid="select-status"
+          tabIndex={1}
+          aria-label='Filter by Status'
+        >
+          {statuses}
+        </select>
+      </div>
+    </td>
   )
 }
 

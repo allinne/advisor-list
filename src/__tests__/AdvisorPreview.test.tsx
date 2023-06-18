@@ -27,7 +27,7 @@ describe('AdvisorPreview', () => {
     expect(name.innerHTML).toStrictEqual(advisor.name);
 
     const status = await screen.findByTestId('advisor-status');
-    expect(status.innerHTML).toStrictEqual(AvailabilityStatus[advisor.status]);
+    expect(status.classList.contains(`advisor-item__status--${AvailabilityStatus[advisor.status]}`)).toBeTruthy();
 
     const language = await screen.findByTestId('advisor-language');
     expect(language.innerHTML).toStrictEqual(advisor.language);

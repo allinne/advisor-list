@@ -9,21 +9,19 @@ function SortReview() {
     setCurrentSorting({ ... currentSorting, byReviews: sortByReviews });
   };
 
-  let text = '';
-  if (currentSorting.byReviews === 'desc') {
-    text = 'most popular';
-  } else if (currentSorting.byReviews === 'asc') {
-    text = 'least popular';
-  }
-
   return (
-    <div
-      onClick={() => handleButtonClick()}
+    <td
+      className="advisor-table__head-sort"
+      onClick={handleButtonClick}
+      role='button'
       data-sort-direction={currentSorting.byReviews}
       data-testid="filter-reviews"
+      aria-label='Sort by Review number'
     >
-      reviews {text}
-    </div>
+      <div className={`advisor-table__sort advisor-table__sort--${currentSorting.byReviews}`}>
+        Reviews
+      </div>
+    </td>
   )
 }
 

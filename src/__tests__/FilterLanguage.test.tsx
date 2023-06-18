@@ -10,7 +10,13 @@ describe('FilterLanguage', () => {
 
     render(
       <CurrentFilteringContext.Provider value={{ currentFiltering, setCurrentFiltering }}>
-        <FilterLanguage/>
+        <table>
+          <thead>
+            <tr>
+              <FilterLanguage/>
+            </tr>
+          </thead>
+        </table>
       </CurrentFilteringContext.Provider>
     );
 
@@ -27,7 +33,13 @@ describe('FilterLanguage', () => {
 
     render(
       <CurrentFilteringContext.Provider value={{ currentFiltering, setCurrentFiltering }}>
-        <FilterLanguage/>
+        <table>
+          <thead>
+            <tr>
+              <FilterLanguage/>
+            </tr>
+          </thead>
+        </table>
       </CurrentFilteringContext.Provider>
     );
 
@@ -41,7 +53,13 @@ describe('FilterLanguage', () => {
 
     render(
       <CurrentFilteringContext.Provider value={{ currentFiltering, setCurrentFiltering }}>
-        <FilterLanguage/>
+        <table>
+          <thead>
+            <tr>
+              <FilterLanguage/>
+            </tr>
+          </thead>
+        </table>
       </CurrentFilteringContext.Provider>
     );
 

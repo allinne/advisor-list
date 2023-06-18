@@ -25,16 +25,24 @@ function FilterLanguage() {
   };
 
   return (
-    <label>
-      Language
-      <select
-        onChange={(ev) => handleSelectChange(ev)}
-        value={currentIndex}
-        data-testid="select-language"
-      >
-        {languages}
-      </select>
-    </label>
+    <td>
+      <div className='advisor-table__head-filter'>
+        <label htmlFor='select-language'>
+          Language
+        </label>
+        <select
+          onChange={handleSelectChange}
+          value={currentIndex}
+          className="advisor-table__select"
+          id='select-language'
+          data-testid="select-language"
+          tabIndex={2}
+          aria-label='Filter by Language'
+        >
+          {languages}
+        </select>
+      </div>
+    </td>
   )
 }
 

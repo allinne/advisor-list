@@ -18,7 +18,7 @@ function AdvisorList({ initialAdvisors }: { initialAdvisors: Advisor[] }) {
   }
 
   let filteredByStatusAdvisors: Advisor[] = [];
-  if (currentFiltering['status'] === AvailabilityStatus.default) {
+  if (currentFiltering['status'] === AvailabilityStatus.all) {
     filteredByStatusAdvisors = filteredByLanguageAdvisors;
   } else {
     filteredByStatusAdvisors = filteredByLanguageAdvisors.filter(el => el.status === currentFiltering['status']);

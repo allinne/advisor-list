@@ -6,7 +6,7 @@ export const INITIAL_SORTING: Sorting = {
 }
 
 export const INITIAL_FILTERING: Filtering = {
-  status: AvailabilityStatus.default,
+  status: AvailabilityStatus.all,
   language: '',
 }
 

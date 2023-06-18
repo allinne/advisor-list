@@ -12,21 +12,24 @@ function App({ initialData }: { initialData: Advisor[] }) {
   const [ currentFiltering, setCurrentFiltering ] = useState(INITIAL_FILTERING);
 
   return (
-    <CurrentSortingContext.Provider value={{ currentSorting, setCurrentSorting }}>
-      <CurrentFilteringContext.Provider value={{ currentFiltering, setCurrentFiltering }}>
-        <table className='body'>
-          <thead>
-            <tr>
-              <td>Advisor</td>
-              <td><FilterStatus/></td>
-              <td><FilterLanguage/></td>
-              <td><SortReview/></td>
-            </tr>
-          </thead>
-          <AdvisorList initialAdvisors={initialData}/>
-        </table>
-      </CurrentFilteringContext.Provider>
-    </CurrentSortingContext.Provider>
+    <div className='content'>
+      <h1>Advisors</h1>
+      <CurrentSortingContext.Provider value={{ currentSorting, setCurrentSorting }}>
+        <CurrentFilteringContext.Provider value={{ currentFiltering, setCurrentFiltering }}>
+          <table className='advisor-table' cellPadding={0} cellSpacing={0}>
+            <thead className='advisor-table__head'>
+              <tr>
+                <td>Advisor</td>
+                <FilterStatus/>
+                <FilterLanguage/>
+                <SortReview/>
+              </tr>
+            </thead>
+            <AdvisorList initialAdvisors={initialData}/>
+          </table>
+        </CurrentFilteringContext.Provider>
+      </CurrentSortingContext.Provider>
+    </div>
   )
 }
 

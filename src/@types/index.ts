@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 
 export enum AvailabilityStatus {
-  'default' = 0,
+  'all' = 0,
   'online' = 1,
   'offline' = 2,
 }
