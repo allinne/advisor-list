@@ -1,8 +1,9 @@
 import { ChangeEvent, useContext, useMemo } from 'react';
 import { CurrentFilteringContext } from '../contexts/index';
+import { FilterSelectData } from '../@types';
 import { LANGUAGES } from '../constants';
 
-function FilterLanguage() {
+function FilterLanguage(props: FilterSelectData) {
   const { currentFiltering, setCurrentFiltering } = useContext(CurrentFilteringContext);
 
   const languageList = useMemo(() => {
@@ -16,7 +17,7 @@ function FilterLanguage() {
     );
   });
 
-  const currentIndex = useMemo(() => {
+  const currentValue = useMemo(() => {
     return languageList.findIndex((language: string) => language === currentFiltering.language);
   }, [languageList, currentFiltering.language]);
 
@@ -24,26 +25,14 @@ function FilterLanguage() {
     setCurrentFiltering({ ...currentFiltering, language: languageList[Number(ev.currentTarget.value)] });
   };
 
-  return (
-    <td>
-      <div className='advisor-table__head-filter'>
-        <label htmlFor='select-language'>
-          Language
-        </label>
-        <select
-          onChange={handleSelectChange}
-          value={currentIndex}
-          className="advisor-table__select"
-          id='select-language'
-          data-testid="select-language"
-          tabIndex={2}
-          aria-label='Filter by Language'
-        >
-          {languages}
-        </select>
-      </div>
-    </td>
-  )
+  const selectElement = props.createSelectElement({
+    selectType: 'language',
+    optionList: languages,
+    currentValue,
+    handleSelectChange
+  });
+
+  return selectElement;
 }
 
-export default FilterLanguage
+export default FilterLanguage;

@@ -19,10 +19,10 @@ function SortReview() {
       aria-label='Sort by Review number'
     >
       <div className={`advisor-table__sort advisor-table__sort--${currentSorting.byReviews}`}>
-        Reviews
+        reviews
       </div>
     </td>
   )
 }
 
-export default SortReview
+export default SortReview;
