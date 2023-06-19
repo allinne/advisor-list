@@ -21,10 +21,10 @@ The app can be easily changed to CSR via fetching advisor list from client side.
 * Use faker.js to generate test data
 
 Here is how the app looks like:
-![app](https://github.com/allinne/advisor-list/assets/888989/ec3296be-97a4-43ad-8c06-c44b5336bc6b "Advisor list sorted by Reviews")
+![app](https://github.com/allinne/advisor-list/assets/888989/3d5dfdd2-cb6f-4402-bf7c-17683c8d6d23 "Advisor list sorted by Reviews")
 
 Test coverage report:
-![tests](https://github.com/allinne/advisor-list/assets/888989/f84970e6-371b-4aad-8e51-0364b35b7afc "Test coverage")
+![tests](https://github.com/allinne/advisor-list/assets/888989/f0696a21-014a-4f92-81ae-625a5633dbd9 "Test coverage")
 
 ## Prerequisites
 
