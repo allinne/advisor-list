@@ -24,7 +24,7 @@ Here is how the app looks like:
 ![app](https://github.com/allinne/advisor-list/assets/888989/3d5dfdd2-cb6f-4402-bf7c-17683c8d6d23 "Advisor list sorted by Reviews")
 
 Test coverage report:
-![tests](https://github.com/allinne/advisor-list/assets/888989/f0696a21-014a-4f92-81ae-625a5633dbd9 "Test coverage")
+![tests](https://github.com/allinne/advisor-list/assets/888989/5b27254b-fd3d-44be-b17a-c2787e5b22e7 "Test coverage")
 
 ## Prerequisites
 
