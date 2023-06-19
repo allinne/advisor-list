@@ -55,7 +55,7 @@ Install it from GitHub using the following commands
 
 * `npm run lint:js`
 
-## TODO
+## todo
 * add Reset filtering and sorting button;
 * add sorting by Advisor Name;
 * use `renderToPipeableStream` instead of `renderToString`. Streaming method can stream content in chunks as it resolves on the server so that the user sees the page being progressively filled in before the client code loads.
