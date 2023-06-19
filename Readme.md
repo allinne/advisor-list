@@ -1,4 +1,4 @@
-# Adviser list
+# Advisor list
 
 The application is developed from scratch not using `create-react-app` tool, which is officially deprecated by React team.
 For initial rendering I have chosen to generate content on the server side and then to load a client side script to execute hydration and make web page interactive.
@@ -19,7 +19,7 @@ The app can be changed to CSR easily with fetching advisor list from the client 
 * Support IE11
 * set up CI on Github Actions for PRs
 
-Here is how the app look like:
+Here is how the app looks like:
 ![app](https://github.com/allinne/advisor-list/assets/888989/ec3296be-97a4-43ad-8c06-c44b5336bc6b "Advisor list sorted by Reviews")
 
 Test coverage report:
